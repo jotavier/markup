@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">FindIt</string>
+    <string name="label_empty_state_or_error">Image de estado vazio ou erro</string>
+</resources>
