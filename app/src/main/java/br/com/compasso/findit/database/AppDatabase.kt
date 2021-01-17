@@ -6,6 +6,8 @@ import androidx.room.TypeConverters
 import br.com.compasso.findit.data.models.Event
 import br.com.compasso.findit.data.models.Person
 import br.com.compasso.findit.database.converters.BigDecimalConverter
+import br.com.compasso.findit.database.daos.EventDAO
+import br.com.compasso.findit.database.daos.PersonDAO
 
 @Database(
     entities = [
@@ -17,4 +19,6 @@ import br.com.compasso.findit.database.converters.BigDecimalConverter
 )
 @TypeConverters(BigDecimalConverter::class)
 abstract class AppDatabase : RoomDatabase() {
+    abstract val eventDAO: EventDAO
+    abstract val personDAO: PersonDAO
 }

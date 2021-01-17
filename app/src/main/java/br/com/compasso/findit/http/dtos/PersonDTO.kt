@@ -12,8 +12,8 @@ class PersonDTO(
 ) : IDataTransferObject<Person> {
 
     override fun toModel() = Person(
-        name,
-        email,
-        eventId
+        name = name,
+        email = email,
+        eventId = eventId
     )
 }

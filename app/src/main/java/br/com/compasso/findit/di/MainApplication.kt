@@ -17,8 +17,10 @@ class MainApplication : Application() {
                 appModule,
                 adapterModule,
                 clientModule,
+                daoModule,
                 databaseModule,
-                repositoryModule
+                repositoryModule,
+                viewModelModule
             )
         }
     }

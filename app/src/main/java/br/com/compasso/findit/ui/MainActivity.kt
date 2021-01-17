@@ -3,6 +3,8 @@ package br.com.compasso.findit.ui
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupWithNavController
 import br.com.compasso.findit.R
 import br.com.compasso.findit.databinding.ActivityMainBinding
 import br.com.compasso.findit.ui.viewmodels.AppBarViewModel
@@ -20,6 +22,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun configureAppBar() {
+        binding.toolbar.setupWithNavController(controller, AppBarConfiguration.Builder().build())
         controller.addOnDestinationChangedListener { _, _, _ ->
             appBar.show()
             appBar.visibility.observe(this, { visibility ->

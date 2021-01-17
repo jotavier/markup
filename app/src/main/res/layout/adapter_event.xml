@@ -1,9 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    <data>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <import type="br.com.compasso.findit.services.extensions.BigDecimalExtensionsKt" />
+
+        <variable
+            name="event"
+            type="br.com.compasso.findit.data.models.Event" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            app:cardBackgroundColor="@color/cardview_shadow_end_color"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintBottom_toTopOf="@id/image_container"
+            app:layout_constraintEnd_toEndOf="@id/image_container"
+            app:layout_constraintStart_toStartOf="@id/image_container"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:maxLines="2"
+                android:text="@{event.title}"
+                android:textColor="@android:color/black"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                tools:text="Feira de adoção de animais na Redenção" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/image_container"
+            android:layout_width="0dp"
+            android:layout_height="350dp"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rounded_8dp"
+                android:scaleType="centerCrop"
+                app:download="@{event.image}"
+                tools:src="@drawable/ic_no_image"
+                tools:ignore="ContentDescription" />
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </layout>

@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="provider"
+            type="br.com.compasso.findit.services.providers.StateProvider" />
+    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -8,32 +16,44 @@
 
         <ImageView
             android:id="@+id/icon"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
             android:contentDescription="@string/label_empty_state_or_error"
-            app:layout_constraintBottom_toTopOf="@id/title"
+            app:bindSrc="@{provider.icon}"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.4"
+            tools:src="@drawable/ic_festival" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
             android:maxLines="1"
+            android:text="@{provider.title}"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/icon" />
+            app:layout_constraintTop_toBottomOf="@id/icon"
+            tools:text="Nenhum evento encontrado" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/message"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxLines="5"
+            android:text="@{provider.message}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/title"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:maxLines="5" />
+            tools:text="Oops... Não encontramos nenhum evento.\nArraste para baixo para buscar novamente" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

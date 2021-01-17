@@ -1,21 +1,27 @@
 package br.com.compasso.findit.data.models
 
 import android.os.Parcelable
-import androidx.room.ColumnInfo
-import androidx.room.Entity
-import androidx.room.ForeignKey
-import androidx.room.PrimaryKey
+import androidx.room.*
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-@Entity
+@Entity(
+    indices = [
+        Index(
+            value = ["email", "event_id"],
+            name = "ux_person_email_event_id",
+            unique = true
+        )
+    ]
+)
 data class Person(
-    @PrimaryKey val name: String?,
-    val email: String?,
+    @PrimaryKey(autoGenerate = true) val id: Long = 0,
+    val email: String,
+    val name: String,
     @ForeignKey(
         entity = Event::class,
         parentColumns = ["id"],
         childColumns = ["event_id"]
     )
-    @ColumnInfo(name = "event_id") val eventId: Int?
+    @ColumnInfo(name = "event_id") val eventId: Int
 ) : Parcelable

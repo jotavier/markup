@@ -8,7 +8,7 @@ import java.math.BigDecimal
 @Parcelize
 data class EventDTO(
     private val id: Long,
-    private val people: List<PersonDTO>,
+    private val people: List<PersonDTO>?,
     private val date: Long,
     private val description: String,
     private val image: String,
@@ -22,7 +22,7 @@ data class EventDTO(
         id,
         date,
         description,
-        people.map { personDto -> personDto.toModel() },
+        people?.map { personDto -> personDto.toModel() },
         image,
         longitude,
         latitude,

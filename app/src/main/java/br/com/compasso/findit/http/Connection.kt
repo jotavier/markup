@@ -5,6 +5,7 @@ import okhttp3.Headers.Companion.toHeaders
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
 class Connection {
@@ -23,6 +24,7 @@ class Connection {
     )
 
     private val retrofitBuilder = Retrofit.Builder()
+        .addConverterFactory(GsonConverterFactory.create())
         .baseUrl(BuildConfig.BASE_URL)
 
     fun build(): Retrofit = retrofitBuilder.client(getHttpClient()).build()
