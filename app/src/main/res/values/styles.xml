@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Base.InputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@android:color/white</item>
+        <item name="boxStrokeErrorColor">@color/colorAccent</item>
+        <item name="errorEnabled">true</item>
+        <item name="errorIconTint">@color/colorAccent</item>
+        <item name="errorTextColor">@color/colorAccent</item>
+        <item name="hintTextColor">@color/white</item>
+        <item name="placeholderTextColor">@color/white</item>
+    </style>
+</resources>

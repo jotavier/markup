@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="label_empty_state_or_error">Image de estado vazio ou erro</string>
+    <string name="app_name">markup</string>
+    <string name="label_empty_state_or_error">Imagem de estado vazio ou erro</string>
+    <string name="label_description">Descrição</string>
+    <string name="label_see_more">Ver mais</string>
+    <string name="label_see_less">Ver menos</string>
+    <string name="label_check_in">Check-in</string>
+    <string name="label_email">E-mail</string>
+    <string name="label_name">Nome</string>
+    <string name="label_enter">Entrar</string>
+    <string name="label_message_login_success">Login efetuado com sucesso</string>
+    <string name="label_account">Meus dados</string>
+    <string name="label_favorites">Favoritos</string>
+    <string name="label_details">Detalhes</string>
+    <string name="label_location">Localização</string>
+    <string name="label_share">Compartilhar</string>
+    <string name="map_fragment_tag">map</string>
+    <string name="label_save">Salvar</string>
+    <string name="label_check_in_data">Dados utilizados para check-in.\nÉ possível alterá-los em <b>Meus dados</b></string>
 </resources>

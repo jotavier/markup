@@ -7,7 +7,7 @@
 
         <variable
             name="provider"
-            type="br.com.compasso.findit.services.providers.StateProvider" />
+            type="br.com.compasso.markup.services.providers.StateProvider" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

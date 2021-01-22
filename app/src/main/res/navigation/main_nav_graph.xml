@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/events">
+
+    <fragment
+        android:id="@+id/events"
+        android:name="br.com.compasso.markup.ui.fragments.EventsFragment"
+        android:label="Próximos eventos"
+        tools:layout="@layout/fragment_events">
+        <action
+            android:id="@+id/to_login"
+            app:destination="@id/login"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/to_event"
+            app:destination="@id/event" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/login"
+        android:name="br.com.compasso.markup.ui.fragments.LoginFragment"
+        android:label="Informe"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/to_home"
+            app:destination="@id/nav_graph"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/favorites"
+        android:name="br.com.compasso.markup.ui.fragments.FavoritesFragment"
+        android:label="@string/label_favorites"
+        tools:layout="@layout/fragment_favorites" />
+
+    <fragment
+        android:id="@+id/account"
+        android:name="br.com.compasso.markup.ui.fragments.AccountFragment"
+        android:label="@string/label_account"
+        tools:layout="@layout/fragment_account" />
+
+    <activity
+        android:id="@+id/event"
+        android:name="br.com.compasso.markup.ui.activities.EventActivity"
+        android:label="EventActivity"
+        tools:layout="@layout/activity_event">
+        <argument
+            android:name="event"
+            app:argType="br.com.compasso.markup.data.models.Event" />
+    </activity>
+
+</navigation>
