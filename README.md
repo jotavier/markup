@@ -31,12 +31,12 @@ Na tela de detalhes do evento, na barra superior, pressione o ícone de comparti
 
 # DEPENDÊNCIAS
 
-* [Material components]()
-* [Glide]()
-* [Retrofit]()
-* [Koin]()
-* [Navigation]()
-* [ViewModel]()
-* [LiveData]()
-* [Databinding]()
-* [Room]()
+* [Material components](https://material.io/resources/get-started#design)
+* [Glide](https://github.com/bumptech/glide)
+* [Retrofit](https://square.github.io/retrofit/)
+* [Koin](https://insert-koin.io/)
+* [Navigation](https://developer.android.com/guide/navigation/navigation-getting-started)
+* [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel)
+* [LiveData](https://developer.android.com/topic/libraries/architecture/livedata?hl=pt-br)
+* [Databinding](https://developer.android.com/topic/libraries/data-binding?hl=pt-br)
+* [Room](https://developer.android.com/training/data-storage/room)
