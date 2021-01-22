@@ -40,3 +40,15 @@ Na tela de detalhes do evento, na barra superior, pressione o ícone de comparti
 * [LiveData](https://developer.android.com/topic/libraries/architecture/livedata?hl=pt-br)
 * [Databinding](https://developer.android.com/topic/libraries/data-binding?hl=pt-br)
 * [Room](https://developer.android.com/training/data-storage/room)
+
+# ARQUITETURA
+
+Para este projeto foi escolhido o padrão de projeto MVVC.
+
+Diversos são os fatores que levam a escolha do mesmo, são:
+
+* Aconselhado pela equipe de desenvolvedores Android;
+* Facilita as interações de teste, desacoplando as regras de negócio;
+* Junto do databinding, reduz o código de instrução das views evitando, em vários casos,
+a necessidade de colocar diretamente no código situações que lidam com views (esconder e mostrar uma view, por exemplo);
+* Encapsula regras de negócio, minimizando código e evitando boilerplate;
