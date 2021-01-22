@@ -5,6 +5,10 @@ Aplicativo Android feito em linguagem Kotlin. Criado como requisito para a avali
 
 Aplicativo de anúncio de eventos, com tela de detalhes, localização, check-in e favoritos.
 
+## DEMONSTRAÇÃO
+
+![](1.gif)  ![](2.gif)  ![](3.gif)
+
 ## INTEGRIDADE LOCAL
 
 As funcionalidades:
