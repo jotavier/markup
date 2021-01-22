@@ -7,6 +7,10 @@ Aplicativo de anúncio de eventos, com tela de detalhes, localização, check-in
 
 Se desejar, você pode baixar o aplicativo [aqui](/apk/app-markup.apk)
 
+## DEMONSTRAÇÃO
+
+![](/imgs/1.gif)  ![](/imgs/2.gif)  ![](/imgs/3.gif)
+
 ## INTEGRIDADE LOCAL
 
 As funcionalidades:
