@@ -49,7 +49,7 @@ Na tela de detalhes do evento, na barra superior, pressione o ícone de comparti
 
 # ARQUITETURA
 
-Para este projeto foi escolhido o padrão de projeto MVVC.
+Para este projeto foi escolhido o padrão de projeto MVVM.
 
 Diversos são os fatores que levam a escolha do mesmo, são:
 
